@@ -130,7 +130,7 @@ public class Book {
 	 * converts book object to legible string giving info about its attributes.
 	 */
 	public String toString() {
-		return title + " by " + author + "ISBN: "+ ISBN +", $"+String.format("%.2f", price)+ ")";
+		return title + " by " + author + " ISBN: "+ ISBN +", $"+String.format("%.2f", price)+ ")";
 	}
 }
 

@@ -22,6 +22,7 @@ public class Library {
 		if (count < books.length) {
 			books[count] = book;
 			count++;
+			System.out.println("Book added.");
 			return true;
 			//adds book to end of books array
 		}
@@ -50,9 +51,9 @@ public class Library {
 					books[count-1] = null;
 					//decrease book counter
 					count--;
+					System.out.println("Removed.");
 					return true;
 				}
-				
 			} return false;//book not found
 	}
 	
@@ -68,9 +69,11 @@ public class Library {
 			//loops through until matching ISBN is found
 			for (int i=0; i < count -1; i++) {
 				if (books[i].getISBN().equals(ISBN)) {
+					System.out.println("Found.");
 					return books[i]; //returns matching book
 				}
 			}
+			
 			return null;
 		}
 		
