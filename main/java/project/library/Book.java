@@ -13,17 +13,14 @@ public class Book {
 	private double price;
 	
 	/**
-	 * Adds default values for the variables.
+	 * 
+	 * @param title sets default title
+	 * @param author sets default author
+	 * @param ISBN sets default ISBN
+	 * @param price sets default price
 	 */
-	public Book() {
-		title = "unknown";
-		author = "unknown";
-		ISBN = "unknown";
-		price = 0.0;
-	}
-	/**
-	 * @param copy Accepts a book object and creates a new one.
-	 */
+	
+	
 	public Book(Book copy) {
 		if (copy == null) {
 			System.out.println("Error, empty Book object passed in."); 
@@ -37,6 +34,16 @@ public class Book {
 		this.price = copy.price;
 	}
 	
+	/**
+	 * @param copy Accepts a book object and creates a new one.
+	 */
+	public Book(String title, String author, String ISBN, double price) {
+		title = "unknown";
+		author = "unknown";
+		ISBN = "unknown";
+		price = 0.0;
+	}
+
 	/**
 	 * @return gets the title of book object
 	 */
