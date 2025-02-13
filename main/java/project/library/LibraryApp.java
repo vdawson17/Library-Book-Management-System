@@ -22,6 +22,13 @@ public class LibraryApp {
 		library.addBook(book2);
 		library.addBook(book3);
 		
+		System.out.println(library.searchByISBN("978-8-4053-9813-7"));
+		library.removeBook(book3);
+		Book fakeBook = new Book("Fake","Fake","0",0.00);
+		library.removeBook(fakeBook);
+		
+		System.out.println("All Books: ");
+		library.displayBooks();
 	}
 	
 

@@ -19,8 +19,24 @@ public class Book {
 	 * @param ISBN sets default ISBN
 	 * @param price sets default price
 	 */
+	public Book() {
+		title = "unknown";
+		author = "unknown";
+		ISBN = "unknown";
+		price = 0.0;
+	}
+	/*
+	 * Assigns provided values to attributes of Book
+	 */
+	public Book(String title, String author, String ISBN, double price){
+		this.title = title;
+		this.author = author;
+		this.ISBN = ISBN;
+		this.price = price; }
 	
-	
+	/**
+	 * @param copy Accepts a book object and creates a new one.
+	 */
 	public Book(Book copy) {
 		if (copy == null) {
 			System.out.println("Error, empty Book object passed in."); 
@@ -32,16 +48,6 @@ public class Book {
 		this.ISBN = copy.ISBN;
 		
 		this.price = copy.price;
-	}
-	
-	/**
-	 * @param copy Accepts a book object and creates a new one.
-	 */
-	public Book(String title, String author, String ISBN, double price) {
-		title = "unknown";
-		author = "unknown";
-		ISBN = "unknown";
-		price = 0.0;
 	}
 
 	/**

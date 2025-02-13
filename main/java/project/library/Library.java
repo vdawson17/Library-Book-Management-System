@@ -66,7 +66,7 @@ public class Library {
 				return null;
 			}
 			//loops through until matching ISBN is found
-			for (int i=0; i < count-1; i++) {
+			for (int i=0; i < count -1; i++) {
 				if (books[i].getISBN().equals(ISBN)) {
 					return books[i]; //returns matching book
 				}
