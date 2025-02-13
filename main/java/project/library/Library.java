@@ -11,9 +11,27 @@ public class Library {
 	private Book[] books = new Book[5];
 	private int count = 0;
 	
+	/**
+	 * @param takes book and adds it to array of books
+	 * @return returns true if successful and false if not
+	 */
 	public boolean addBook(Book book) {
 		if (book == null) {
-			return false;
+			return false; /**makes sure that empty object isn't passed in*/
+		}
+		if (count < books.length) {
+			books[count] = book;
+			count++;
+			return true;
+			/**
+			 * adds book to end of books array
+			 */
+		}
+		else {
+			return false; 
+			/**
+			 * not room for another book
+			 */
 		}
 	}
 	
