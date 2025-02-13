@@ -56,6 +56,32 @@ public class Library {
 			} return false;//book not found
 	}
 	
+		/**
+		 * 
+		 * @param ISBN given ISBN string, checks if ISBN is the same as any books in array
+		 * @return if so returns the matching book, if not returns null
+		 */
+		public Book searchByISBN(String ISBN) {
+			if (ISBN == null) {
+				return null;
+			}
+			//loops through until matching ISBN is found
+			for (int i=0; i < count-1; i++) {
+				if (books[i].getISBN().equals(ISBN)) {
+					return books[i]; //returns matching book
+				}
+			}
+			return null;
+		}
+		
+		/**
+		 * loops through books array, printing out each book using toString method
+		 */
+		public void displayBooks() {
+			for(int i = 0; i<count; i++) {
+				System.out.println(books[i].toString());
+			}
+		}
 	
 	
 	
