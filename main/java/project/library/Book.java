@@ -112,5 +112,12 @@ public class Book {
 		}
 	}
 	
+	@Override
+	/**
+	 * converts book object to legible string giving info about its attributes.
+	 */
+	public String toString() {
+		return title + " by " + author + "ISBN: "+ ISBN +", $"+String.format("%.2f", price)+ ")";
+	}
 }
 
