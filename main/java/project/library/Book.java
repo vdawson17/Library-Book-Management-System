@@ -37,5 +37,60 @@ public class Book {
 		this.price = copy.price;
 	}
 	
-
+	/**
+	 * @return gets the title of book object
+	 */
+	public String getTitle() {
+		return this.title;
+	}
+	
+	/**
+	 * @return gets the author of book object
+	 */
+	public String getAuthor() {
+		return this.author;
+	}
+	
+	/**
+	 * @return gets the ISBN of book object
+	 */
+	public String getISBN() {
+		return this.ISBN;
+	}
+	
+	/**
+	 * @return gets the price of book object
+	 */
+	public double getPrice(){
+		return this.price;
+	}
+	
+	/**
+	 * @param title given a string, sets title of book to that
+	 */
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	/**
+	 * @param title given a string, sets author of book to that
+	 */
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
+	/**
+	 * @param title given a string, sets ISBN of book to that
+	 */
+	public void setISBN(String ISBN) {
+		this.ISBN = ISBN;
+	}
+	
+	/**
+	 * @param title given a double, sets price of book to that
+	 */
+	public void setPrice(double price) {
+		this.price = price;
+	}
 }
+
