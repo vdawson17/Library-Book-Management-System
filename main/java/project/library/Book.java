@@ -92,5 +92,25 @@ public class Book {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	
+	@Override
+	/**
+	 * @param given an object, compares the two books ISBN numbers, returns true if they are the same and false if not
+	 */
+	public boolean equals(Object other) {
+		//checks if other object is null
+		if(other == null)
+			return false;
+		//checks if other object is the same class
+		else if (getClass()!= other.getClass())
+			return false;
+		else {
+			//Cast other to Book object
+			Book otherBook = (Book)other;
+			//compare ISBN values
+			return this.ISBN.equals(otherBook.ISBN);
+		}
+	}
+	
 }
 
